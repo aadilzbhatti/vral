@@ -1,0 +1,15 @@
+audioread==2.1.4
+cycler==0.10.0
+Cython==0.24.1
+decorator==4.0.10
+joblib==0.10.2
+librosa==0.4.3
+matplotlib==1.5.3
+numpy==1.11.1
+pyparsing==2.1.9
+python-dateutil==2.5.3
+pytz==2016.6.1
+resampy==0.1.4
+scikit-learn==0.17.1
+scipy==0.18.0
+six==1.10.0
