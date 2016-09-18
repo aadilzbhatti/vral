@@ -27,10 +27,11 @@ def findMatch(testFile):
         tmp_f.close()
 
 
-        #TODO: 1/compare the first row of l_cough_transpose to every row of l0_transpose
+        #TODO (THIS WILL BE A HORRIBLE ALGORITHM): 1/compare the first row of l_cough_transpose to every row of l0_transpose
         # 2/ find the sum of squared differences btw each pair (l_cough_transpose[0][j], l0_transpose[i][j])
         # 3/ if the sum of squared differences is within a certain margin of error, start checking if the next size_cough rows below it fits l_cough_transpose. Not more than 5% of rows should have a sum of squared differences outside of allowed margin of error
 
+        #TODO #2: Try to learn TensorFlow. Then maybe build a good data set to train a neural network to do the recognition. 
         
     
     
