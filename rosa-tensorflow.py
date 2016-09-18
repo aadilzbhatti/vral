@@ -17,6 +17,7 @@ import tensorflow as tf
 
 def buildPattern():
     #TODO: tensorflow stuff
+    
     return;
     
     
