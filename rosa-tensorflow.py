@@ -1,3 +1,6 @@
+#Usage: python <name of this source file> <path to the audio file>
+
+
 # We'll need numpy for some mathematical operations
 import numpy as np
 
@@ -11,19 +14,11 @@ ms.use('seaborn-muted')
 import librosa
 # And the display module for visualization
 import librosa.display
+import sys
 
-# tensorflow for ML
-import tensorflow as tf
-
-def buildPattern():
-    #TODO: tensorflow stuff
-    
-    return;
     
     
-def loadImage():
-    audio_path = './cough.wav'
-
+def loadImage(audio_path):
     y, sr = librosa.load(audio_path)
 
     #make and display a mel-scaled power (energy-squared) spectrogram
@@ -51,10 +46,20 @@ def loadImage():
     # print sr
     print y
     plt.show()
-    return S
 
+
+def convertCoughAudioToText():
+    # standard coughing sound
+    parent_dir = os.getcwd()
+    for root, _, files in os.walk('./coughs/raw'):
+        for name in files:
+            datapath = os.path.join(root, name)
+            y, sr = librosa.load(datapath)
+            S = librosa.feature.melspectrogram(y, sr=sr, n_mels = 128)
+            np.savetxt(parent_dir + "/coughs/" + name + ".txt", S)
 
 
 # main()
-S = loadImage()
+
+S = loadImage(sys.argv[1])
     
