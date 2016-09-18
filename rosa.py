@@ -40,7 +40,7 @@ plt.title('mel power spectrogram')
 plt.colorbar(format='%+02.0f dB')
 
 # Make the figure layout compact
-#plt.tight_layout()
-print log_S
+plt.tight_layout()
+print log_S, log_S.shape
 print sr
 plt.show()
